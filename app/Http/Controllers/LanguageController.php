@@ -116,6 +116,10 @@ class LanguageController extends Controller
         // Retrieve the language record to get its code
         $language = Language::findOrFail($id);
 
+        if ($language->code == 'ar') {
+            return response()->json(['error' => true, 'message' => 'لا يمكن حذف اللغة العربية']);
+        }
+
         if ($language->code == app()->getLocale()) {
             return response()->json(['error' => true, 'message' => 'The current language cannot be deleted. Please switch to another one before delete.']);
         }
@@ -149,6 +153,10 @@ class LanguageController extends Controller
             // Retrieve the language record to get its code
             $language = Language::findOrFail($id);
 
+            if ($language->code == 'ar') {
+                return response()->json(['error' => true, 'message' => 'لا يمكن حذف اللغة العربية']);
+            }
+            
             if ($language->code != app()->getLocale()) {
                 // Construct the directory path for the language files
                 $languageDirectoryPath = resource_path('lang/' . $language->code);

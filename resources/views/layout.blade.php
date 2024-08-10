@@ -7,7 +7,6 @@
     data-template="vertical-menu-template-free"
 >
 
-
 <head>
     <meta charset="utf-8" />
     <meta name="csrf-token" content="{{ csrf_token() }}" />
@@ -30,8 +29,10 @@
 
     <!-- Core CSS -->
     
+    {{-- RTL --}}
     @if (app()->getLocale() == 'ar')
         <link rel="stylesheet" href="{{ asset('assets/vendor/css/core-rtl.css') }}"/>
+        <link href="{{ asset('assets/css/bootstrap-rtl.min.css') }}" rel="stylesheet" />
         <link rel="stylesheet" href="{{ asset('assets/css/rtl.css') }}"/>
     @else
         <link rel="stylesheet" href="{{ asset('assets/vendor/css/core.css') }}"/>
@@ -62,10 +63,6 @@
     <link href="{{ asset('assets/css/dragula.css') }}" rel="stylesheet" />
     <link href="{{ asset('assets/css/toastr.min.css') }}" rel="stylesheet" />
 
-    {{-- RTL --}}
-    @if (app()->getLocale() == 'ar')
-        <link href="{{ asset('assets/css/bootstrap-rtl.min.css') }}" rel="stylesheet" />
-    @endif
 
 
     <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->

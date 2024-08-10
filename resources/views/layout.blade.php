@@ -1,5 +1,11 @@
 <!DOCTYPE html>
-<html lang="en" class="light-style layout-menu-fixed" dir="ltr" data-theme="theme-default" data-assets-path="{{ asset('assets/') }}" data-template="vertical-menu-template-free">
+<html lang="{{ app()->getLocale() }}" 
+    class="light-style layout-menu-fixed" 
+    dir="{{ app()->getLocale() == 'ar' ? 'rtl' : 'ltr' }}" 
+    data-theme="theme-default" 
+    data-assets-path="{{ asset('assets/') }}" 
+    data-template="vertical-menu-template-free"
+>
 
 
 <head>
@@ -23,7 +29,14 @@
     <link rel="stylesheet" href="{{ asset('assets/vendor/fonts/boxicons.css') }}" />
 
     <!-- Core CSS -->
-    <link rel="stylesheet" href="{{ asset('assets/vendor/css/core.css') }}" class="template-customizer-core-css" />
+    
+    @if (app()->getLocale() == 'ar')
+        <link rel="stylesheet" href="{{ asset('assets/vendor/css/core-rtl.css') }}"/>
+        <link rel="stylesheet" href="{{ asset('assets/css/rtl.css') }}"/>
+    @else
+        <link rel="stylesheet" href="{{ asset('assets/vendor/css/core.css') }}"/>
+    @endif
+
     <link rel="stylesheet" href="{{ asset('assets/vendor/css/theme-default.css') }}" class="template-customizer-theme-css" />
 
 
@@ -48,7 +61,12 @@
     <link href="{{ asset('assets/css/bootstrap-table.min.css') }}" rel="stylesheet" />
     <link href="{{ asset('assets/css/dragula.css') }}" rel="stylesheet" />
     <link href="{{ asset('assets/css/toastr.min.css') }}" rel="stylesheet" />
-    <link href="{{ asset('assets/css/dropzone.min.css') }}" rel="stylesheet" />
+
+    {{-- RTL --}}
+    @if (app()->getLocale() == 'ar')
+        <link href="{{ asset('assets/css/bootstrap-rtl.min.css') }}" rel="stylesheet" />
+    @endif
+
 
     <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
     <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->

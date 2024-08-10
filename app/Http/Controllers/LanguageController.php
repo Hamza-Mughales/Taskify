@@ -206,8 +206,9 @@ class LanguageController extends Controller
 
     public function switch($locale)
     {
-
         session(['my_locale' => $locale]);
+
+        App::setLocale($locale);
 
         return redirect()->back()->with('message', 'Language switched successfully.');
     }

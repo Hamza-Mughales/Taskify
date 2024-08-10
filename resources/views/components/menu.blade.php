@@ -44,9 +44,9 @@ if ($currentRoute) {
 @if ($user->hasrole('superadmin'))
     <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme menu-container">
         <div class="app-brand demo">
-            <a href="{{ route('home.index') }}" class="app-brand-link">
+            <a href="{{ route('home.index') }}" class="app-brand-link my-0 mx-auto">
                 <span class="app-brand-logo demo">
-                    <img src="{{ asset($general_settings['full_logo']) }}" width="200px" alt="" />
+                    <img src="{{ asset($general_settings['full_logo']) }}" width="100" height="100" alt="" />
                 </span>
 
             </a>

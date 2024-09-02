@@ -90,9 +90,9 @@
                                 <div class="col-md-6 mb-md-0 mb-2">
                                     <h6 class ="  text-capitalize">
                                         {{ get_label('max_workspaces', 'Maximum Number of workspaces') }}:
-                                        {!! $plan->max_worksapces == -1
+                                        {!! $plan->max_workspaces == -1
                                             ? '<span class="text-primary fw-semibold">' . get_label('unlimited', 'Unlimited') . '</span>'
-                                            : '<span class="text-primary fw-semibold">' . $plan->max_worksapces . '</span>' !!}
+                                            : '<span class="text-primary fw-semibold">' . $plan->max_workspaces . '</span>' !!}
                                     </h6>
                                 </div>
                                 <div class="col-md-6 mb-md-0 mb-2">

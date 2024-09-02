@@ -99,7 +99,7 @@
                                             <li class="mb-2">
                                                 <i class="fas fa-check-circle me-2 text-primary text-gradient"></i>
                                                 <span class="fw-semibold">{{ get_label('max_workspaces', 'Max Workspaces') }}:</span>
-                                                {!! $plan->max_worksapces == -1 ? '<span class="fw-semibold">Unlimited</span>' : '<span class="fw-semibold">' . $plan->max_worksapces . '</span>' !!}
+                                                {!! $plan->max_workspaces == -1 ? '<span class="fw-semibold">Unlimited</span>' : '<span class="fw-semibold">' . $plan->max_workspaces . '</span>' !!}
                                             </li>
                                             @if ($plan->modules)
                                             <li class="mb-2">
@@ -201,7 +201,7 @@
                                                         <li class="mb-2">
                                                             <i class="fas fa-check-circle me-2 text-primary text-gradient"></i>
                                                             <span class="fw-semibold">{{ get_label('max_workspaces', 'Max Workspaces') }}:</span>
-                                                            {!! $plan->max_worksapces == -1 ? '<span class="fw-semibold">Unlimited</span>' : '<span class="fw-semibold">' . $plan->max_worksapces . '</span>' !!}
+                                                            {!! $plan->max_workspaces == -1 ? '<span class="fw-semibold">Unlimited</span>' : '<span class="fw-semibold">' . $plan->max_workspaces . '</span>' !!}
                                                         </li>
                                                         @if ($plan->modules)
                                                         <li class="mb-2">
@@ -296,7 +296,7 @@
                                                         <li class="mb-2">
                                                             <i class="fas fa-check-circle me-2 text-primary text-gradient"></i>
                                                             <span class="fw-semibold">{{ get_label('max_workspaces', 'Max Workspaces') }}:</span>
-                                                            {!! $plan->max_worksapces == -1 ? '<span class="fw-semibold">Unlimited</span>' : '<span class="fw-semibold">' . $plan->max_worksapces . '</span>' !!}
+                                                            {!! $plan->max_workspaces == -1 ? '<span class="fw-semibold">Unlimited</span>' : '<span class="fw-semibold">' . $plan->max_workspaces . '</span>' !!}
                                                         </li>
                                                         @if ($plan->modules)
                                                         <li class="mb-2">

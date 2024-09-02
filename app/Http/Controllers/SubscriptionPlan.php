@@ -829,7 +829,7 @@ class SubscriptionPlan extends Controller
             'max_clients' => $plan->max_clients,
             'max_projects' => $plan->max_projects,
             'max_team_members' => $plan->max_team_members,
-            'max_workspaces' => $plan->max_worksapces,
+            'max_workspaces' => $plan->max_workspaces,
             'modules' => json_decode($plan->modules),
         ];
     }

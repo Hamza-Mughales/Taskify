@@ -147,9 +147,9 @@
                                                     class="badge badge-center w-px-20 h-px-20 rounded-pill bg-label-primary me-2"><i
                                                         class="bx bx-check bx-xs"></i></span>
                                                 {{ get_label('max_workspaces', 'Max Workspaces') }}:
-                                                {!! $plan->max_worksapces == -1
+                                                {!! $plan->max_workspaces == -1
                                                     ? '<span class="fw-semibold">Unlimited</span>'
-                                                    : '<span class="fw-semibold">' . $plan->max_worksapces . '</span>' !!}
+                                                    : '<span class="fw-semibold">' . $plan->max_workspaces . '</span>' !!}
                                             </li>
                                             @if ($plan->modules)
                                                 <li class="mb-2">

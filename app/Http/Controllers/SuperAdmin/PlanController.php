@@ -141,7 +141,7 @@ class PlanController extends Controller
         $plan->max_projects = $validatedData['max_projects'];
         $plan->max_clients = $validatedData['max_clients'];
         $plan->max_team_members = $validatedData['max_team_members'];
-        $plan->max_worksapces = $validatedData['max_workspaces'];
+        $plan->max_workspaces = $validatedData['max_workspaces'];
         $plan->modules = $validatedData['modules'];
         $plan->plan_type = $validatedData['planType'];
         $plan->status = $validatedData['status'];
@@ -223,7 +223,7 @@ class PlanController extends Controller
         $plan->max_projects = $validatedData['max_projects'];
         $plan->max_clients = $validatedData['max_clients'];
         $plan->max_team_members = $validatedData['max_team_members'];
-        $plan->max_worksapces = $validatedData['max_workspaces'];
+        $plan->max_workspaces = $validatedData['max_workspaces'];
         $plan->modules = $validatedData['modules'];
         if ($validatedData['plan_image']) {
             $plan->image = $validatedData['plan_image'];

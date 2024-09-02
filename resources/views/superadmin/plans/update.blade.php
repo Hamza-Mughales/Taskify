@@ -78,7 +78,7 @@
                                     class="form-label bold"><?= get_label('max_workspaces', 'Maximum Workspaces:') ?></label>
 
                                 <input type="number" class="form-control" id="maxWorkshops" min="-1"
-                                    placeholder="Enter a number" value="{{ $plan->max_worksapces }}" required>
+                                    placeholder="Enter a number" value="{{ $plan->max_workspaces }}" required>
                             </div>
                         </div>
 

@@ -11,10 +11,6 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('users', function (Blueprint $table) {
-            //
-            $table->text('country_code')->nullable();
-        });
         Schema::table('clients', function (Blueprint $table) {
             //
             $table->text('country_code')->nullable();
@@ -26,10 +22,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('users', function (Blueprint $table) {
-            //
-            $table->dropColumn('country_code');
-        });
         Schema::table('clients', function (Blueprint $table) {
             //
             $table->dropColumn('country_code');

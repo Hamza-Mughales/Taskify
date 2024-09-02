@@ -144,22 +144,26 @@ class ProjectsController extends Controller
         $formFields['workspace_id'] = $this->workspace->id;
         $formFields['created_by'] = $this->user->id;
 
-
+        
         $new_project = Project::create($formFields);
-
+        
         $userIds = $request->input('user_id') ?? [];
         $clientIds = $request->input('client_id') ?? [];
         $tagIds = $request->input('tag_ids') ?? [];
         // Set creator as a participant automatically
         if (Auth::guard('client')->check() && !in_array($this->user->id, $clientIds)) {
+            // dd(111111111    );
             array_splice($clientIds, 0, 0, $this->user->id);
         } else if (Auth::guard('web')->check() && !in_array($this->user->id, $userIds)) {
+            // dd(22222);
             array_splice($userIds, 0, 0, $this->user->id);
         }
+        // dd(4444, $this->user->id, $userIds, in_array($this->user->id, $userIds));
 
         $project_id = $new_project->id;
         $project = Project::find($project_id);
         $project->users()->attach($userIds);
+        
         $project->clients()->attach($clientIds);
         $project->tags()->attach($tagIds);
         $notification_data = [

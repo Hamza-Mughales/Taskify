@@ -13,10 +13,6 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::table('todos', function (Blueprint $table) {
-            $table->unsignedBigInteger('workspace_id')->after('id');
-        });
-
         Schema::table('meetings', function (Blueprint $table) {
             $table->unsignedBigInteger('workspace_id')->after('id');
             $table->unsignedBigInteger('created_by')->after('end_date_time');

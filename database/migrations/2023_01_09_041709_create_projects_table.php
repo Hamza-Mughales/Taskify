@@ -15,11 +15,9 @@ return new class extends Migration
     {
         Schema::create('projects', function (Blueprint $table) {
             $table->id();
-            $table->string('user_id');
-            $table->string('client_id');
             $table->string('title');
             $table->longText('description');
-            $table->string('status');
+            $table->unsignedBigInteger('status_id');
             $table->integer('budget');
             $table->date('start_date');
             $table->date('end_date');

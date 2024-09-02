@@ -176,7 +176,7 @@ function updateFeatures(planId) {
         var featuresHTML = '<ul>';
         featuresHTML += '<li>Max Projects: ' + selectedPlan.max_projects + '</li>';
         featuresHTML += '<li>Max Team Members: ' + selectedPlan.max_team_members + '</li>';
-        featuresHTML += '<li>Max Workspaces: ' + selectedPlan.max_worksapces + '</li>';
+        featuresHTML += '<li>Max Workspaces: ' + selectedPlan.max_workspaces + '</li>';
         featuresHTML += '<li>Max Clients: ' + selectedPlan.max_clients + '</li>';
         featuresHTML += '<li>Modules:</li>';
         featuresHTML += '<ul>';
@@ -237,7 +237,7 @@ $('#create_subscription_form').on('submit', function (event) {
             max_clients: selectedPlan.max_clients,
             max_projects: selectedPlan.max_projects,
             max_team_members: selectedPlan.max_team_members,
-            max_workspaces: selectedPlan.max_worksapces,
+            max_workspaces: selectedPlan.max_workspaces,
             modules: JSON.parse(selectedPlan.modules),
         }
 

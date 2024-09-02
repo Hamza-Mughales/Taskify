@@ -496,9 +496,9 @@
                                                         'Max
                                                                         Workspaces',
                                                     ) }}:</span>
-                                                {!! $plan->max_worksapces == -1
+                                                {!! $plan->max_workspaces == -1
                                                     ? '<span class="fw-semibold">Unlimited</span>'
-                                                    : '<span class="fw-semibold">' . $plan->max_worksapces . '</span>' !!}
+                                                    : '<span class="fw-semibold">' . $plan->max_workspaces . '</span>' !!}
                                             </li>
                                             @if ($plan->modules)
                                                 <li class="mb-2">
@@ -636,9 +636,9 @@
                                         'Max
                                                 Workspaces',
                                     ) }}:</span>
-                                {!! $plan->max_worksapces == -1
+                                {!! $plan->max_workspaces == -1
                                     ? '<span class="fw-semibold">Unlimited</span>'
-                                    : '<span class="fw-semibold">' . $plan->max_worksapces . '</span>' !!}
+                                    : '<span class="fw-semibold">' . $plan->max_workspaces . '</span>' !!}
                             </li>
                             @if ($plan->modules)
                                 <li class="mb-2">
@@ -762,9 +762,9 @@
                                 'Max
                                                                 Workspaces',
                             ) }}:</span>
-                        {!! $plan->max_worksapces == -1
+                        {!! $plan->max_workspaces == -1
                             ? '<span class="fw-semibold">Unlimited</span>'
-                            : '<span class="fw-semibold">' . $plan->max_worksapces . '</span>' !!}
+                            : '<span class="fw-semibold">' . $plan->max_workspaces . '</span>' !!}
                     </li>
                     @if ($plan->modules)
                         <li class="mb-2">
